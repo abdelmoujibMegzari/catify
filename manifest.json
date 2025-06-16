@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Image Distraction Blocker",
+  "version": "1.0",
+  "description": "Replace all images with a default placeholder; click to reveal.",
+  "icons": {
+    "48": "default.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["default.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
